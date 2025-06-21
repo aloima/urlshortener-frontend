@@ -1,0 +1,15 @@
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/node_modules
+/package-lock.json
+
+# Visual Studip Cpde
+.vscode/
+
+# Angular
+.angular/
