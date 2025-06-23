@@ -1,0 +1,72 @@
+input[type="text"] {
+  padding: 5px;
+  width: 350px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 0;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0px 0px 8px rgb(182, 182, 182);
+  transition: all 0.2s;
+  border: 0;
+  outline: 0;
+}
+
+div:nth-child(1) > label {
+  display: block;
+  font-size: 20px;
+}
+
+button {
+  padding: 8px;
+  font-size: 18px;
+  font-family: "Roboto";
+  width: 60%;
+  background: #0d0d0d;
+  border: 1px solid #5c5c5c;
+  border-radius: 5px;
+  color: white;
+  transition: all 0.3s ease-out;
+}
+
+button:hover {
+  background: #202020;
+}
+
+div.home {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+div:nth-child(2) > input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+div:nth-child(2) > label {
+  float: right;
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+div.home > * {
+  margin: 10px;
+}
+
+div.home > a {
+  text-decoration: none;
+  color: white;
+  background: #0d0d0d;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #5c5c5c;
+  transition: all 0.3s ease-out;
+}
+
+div.home > a:hover {
+  background: #202020;
+}
