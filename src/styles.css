@@ -15,3 +15,34 @@ root {
   align-items: center;
   height: 100%;
 }
+
+button {
+  padding: 8px;
+  font-size: 18px;
+  font-family: "Roboto";
+  width: 60%;
+  background: #0d0d0d;
+  border: 1px solid #5c5c5c;
+  border-radius: 5px;
+  color: white;
+  transition: all 0.3s ease-out;
+}
+
+button:hover {
+  background: #202020;
+}
+
+a.button {
+  text-decoration: none;
+  color: white;
+  background: #0d0d0d;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #5c5c5c;
+  transition: all 0.3s ease-out;
+}
+
+* > a.button:hover {
+  background: #202020;
+}
