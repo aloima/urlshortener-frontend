@@ -1,0 +1,13 @@
+<div *ngIf="url; then thenBlock; else elseBlock"></div>
+
+<div class="deletion">
+  <ng-template #thenBlock>
+    <p>{{ url }} is successfully deleted.</p>
+  </ng-template>
+
+  <ng-template #elseBlock>
+    <p>There is no URL to delete.</p>
+  </ng-template>
+
+  <a class="button" routerLink="/">Go back</a>
+</div>
