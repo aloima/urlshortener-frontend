@@ -70,3 +70,11 @@ div.home > a {
 div.home > a:hover {
   background: #202020;
 }
+
+div.home > ul {
+  list-style-type: none;
+}
+
+div.home > p {
+  font-size: 20px;
+}

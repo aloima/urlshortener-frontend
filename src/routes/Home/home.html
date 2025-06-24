@@ -1,14 +1,30 @@
-<div class="home">
-  <div>
-    <label for="url">URL</label>
-    <input id="url" type="text" placeholder="https://example.com/" />
-  </div>
+<div *ngIf="!shortened; then shortenPart else shortenedPart"></div>
 
-  <div>
-    <label for="listable">Is listable?</label>
-    <input id="listable" type="checkbox" />
-  </div>
+<ng-template #shortenPart>
+  <div class="home">
+    <div>
+      <label for="url">URL</label>
+      <input [(ngModel)]="url" autocomplete="off" name="url" type="text" placeholder="https://example.com/" />
+    </div>
 
-  <button id="shorten">Shorten URL</button>
-  <a href="/list">List available shortened URLs</a>
-</div>
+    <div>
+      <label for="listable">Is listable?</label>
+      <input [(ngModel)]="listable" id="listable" type="checkbox" />
+    </div>
+
+    <button id="shorten" (click)="shortenURL()">Shorten URL</button>
+    <a href="/list">List available shortened URLs</a>
+  </div>
+</ng-template>
+
+<ng-template #shortenedPart>
+  <div class="home">
+    <p>URL is shortened.</p>
+
+    <ul>
+      <li>Short URL: <a [routerLink]="`/${idToString(id)}`">{{ `${site}/${idToString(id)}` }}</a></li>
+      <li>Deletion URL: <a [routerLink]="`/${idToString(deletionId)}`">{{ `${site}/${idToString(deletionId)}` }}</a></li>
+      <li>Is listable?: {{ listable ? "Yes" : "No" }}</li>
+    </ul>
+  </div>
+</ng-template>
