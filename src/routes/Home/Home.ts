@@ -1,4 +1,4 @@
-import { Component, input, Input, OnChanges, SimpleChanges } from "@angular/core";
+import { Component } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { HttpClient } from "@angular/common/http";
@@ -6,6 +6,7 @@ import { Router, RouterLink } from "@angular/router";
 
 import { idToString } from "../../app/id";
 import { API_URL } from "../../environment";
+import { catchError, of } from "rxjs";
 
 @Component({
   templateUrl: "./home.html",
@@ -16,9 +17,10 @@ import { API_URL } from "../../environment";
 export class Home {
   site: string = "";
 
-  url: string = "";
+  _url: string = "";
   listable: boolean = false;
   shortened: boolean = false;
+  errorMessage: string = "";
 
   id: number = 1;
   deletionId: number = 2;
@@ -28,11 +30,26 @@ export class Home {
     this.site = window.location.origin;
   }
 
+  get url() {
+    return this._url;
+  }
+
+  set url(value: string) {
+    this._url = value;
+
+    if (this.errorMessage) this.errorMessage = "";
+  }
+
   shortenURL() {
     this.http.post(`${API_URL}/url`, {
       value: this.url,
       listable: this.listable
-    }).subscribe((value: any) => {
+    }).pipe(catchError(data => of(data.error))).subscribe((value: any) => {
+      if (value.error) {
+        this.errorMessage = value.error.replaceAll("'value' in data", "Given input");
+        return;
+      }
+
       this.shortened = true;
       this.id = value.id;
       this.deletionId = value.deletionId;

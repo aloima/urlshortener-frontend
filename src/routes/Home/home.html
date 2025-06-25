@@ -2,6 +2,10 @@
 
 <ng-template #shortenPart>
   <div class="home">
+    <div class="error" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </div>
+
     <div class="url-input">
       <label for="url">URL</label>
       <input [(ngModel)]="url" autocomplete="off" name="url" type="url" id="url" placeholder="https://example.com/" />
