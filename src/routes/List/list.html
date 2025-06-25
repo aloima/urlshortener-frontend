@@ -1,0 +1,38 @@
+<div class="list">
+  <div *ngIf="loading$ | async; then loading; else succeed"></div>
+
+  <ng-template #loading>
+    <a class="button" routerLink="/">Go back</a>
+    <p>Loading shortened URLs...</p>
+  </ng-template>
+
+  <ng-template #succeed>
+    <div *ngIf="listableCount == 0; then notExist; else exist"></div>
+
+    <ng-template #notExist>
+      <p class="no-url">There is no shortened URL.</p>
+
+      <div><a class="button" routerLink="/">Go back</a></div>
+    </ng-template>
+
+    <ng-template #exist>
+      <div><a class="button" routerLink="/">Go back</a></div>
+
+      <table>
+        <tr>
+          <th>URL</th>
+          <th>Shortened URL</th>
+          <th>Click count</th>
+          <th>Shortened at</th>
+        </tr>
+
+        <tr *ngFor="let url of data">
+          <td><a class="button-small" [routerLink]="`/${idToString(url.id)}`">{{ `${site}/${idToString(url.id)}` }}</a></td>
+          <td><a class="button-small" [href]="url.value">{{ url.value }}</a></td>
+          <td>{{ url.clicks }}</td>
+          <td>{{ url.createdAt }}</td>
+        </tr>
+      </table>
+    </ng-template>
+  </ng-template>
+</div>

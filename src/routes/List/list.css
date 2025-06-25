@@ -1,0 +1,24 @@
+div.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: center;
+  padding: 15px;
+}
+
+table {
+  margin-top: 20px;
+}
+
+p.no-url {
+  margin-top: -3px;
+}
