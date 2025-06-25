@@ -1,4 +1,13 @@
-input[type="text"] {
+input[type="url"]:invalid {
+  background-color: rgb(175, 0, 0);
+  color: white;
+}
+
+input[type="url"]:invalid:focus {
+  box-shadow: 0px 0px 8px rgb(182, 0, 0);
+}
+
+input[type="url"] {
   padding: 5px;
   width: 350px;
   font-size: 20px;
@@ -6,7 +15,7 @@ input[type="text"] {
   border: 0;
 }
 
-input[type="text"]:focus {
+input[type="url"]:focus {
   box-shadow: 0px 0px 8px rgb(182, 182, 182);
   transition: all 0.2s;
   border: 0;
