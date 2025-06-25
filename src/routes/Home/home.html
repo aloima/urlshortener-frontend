@@ -26,5 +26,7 @@
       <li>Deletion URL: <a class="button-small" [routerLink]="`/delete/${idToString(deletionId)}`">{{ `${site}/delete/${idToString(deletionId)}` }}</a></li>
       <li>Is listable?: {{ listable ? "Yes" : "No" }}</li>
     </ul>
+
+    <a class="button" routerLink="/" (click)="reset()">Go back</a>
   </div>
 </ng-template>

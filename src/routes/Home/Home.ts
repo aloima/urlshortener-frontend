@@ -43,4 +43,10 @@ export class Home {
   idToString(id: number): string {
     return idToString(id);
   }
+
+  reset() {
+    this.shortened = false;
+    this.url = "";
+    this.listable = false;
+  }
 }
