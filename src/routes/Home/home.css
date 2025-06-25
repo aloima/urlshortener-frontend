@@ -22,7 +22,7 @@ input[type="url"]:focus {
   outline: 0;
 }
 
-div:nth-child(1) > label {
+div.url-input > label {
   display: block;
   font-size: 20px;
 }
@@ -34,12 +34,12 @@ div.home {
   align-items: center;
 }
 
-div:nth-child(2) > input[type="checkbox"] {
+div.listable-input > input[type="checkbox"] {
   width: 16px;
   height: 16px;
 }
 
-div:nth-child(2) > label {
+div.listable-input > label {
   float: right;
   font-size: 20px;
   margin-left: 5px;

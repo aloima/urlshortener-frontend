@@ -2,12 +2,12 @@
 
 <ng-template #shortenPart>
   <div class="home">
-    <div>
+    <div class="url-input">
       <label for="url">URL</label>
       <input [(ngModel)]="url" autocomplete="off" name="url" type="url" id="url" placeholder="https://example.com/" />
     </div>
 
-    <div>
+    <div class="listable-input">
       <label for="listable">Is listable?</label>
       <input [(ngModel)]="listable" id="listable" type="checkbox" />
     </div>
