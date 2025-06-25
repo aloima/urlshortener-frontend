@@ -44,6 +44,10 @@ div.home > ul {
   list-style-type: none;
 }
 
+div.home > ul > li {
+  padding: 7px;
+}
+
 div.home > p {
   font-size: 20px;
 }

@@ -32,17 +32,25 @@ button:hover {
   background: #202020;
 }
 
-a.button {
+a.button, a.button-small {
   text-decoration: none;
   color: white;
   background: #0d0d0d;
-  font-size: 18px;
-  padding: 8px;
   border-radius: 5px;
   border: 1px solid #5c5c5c;
   transition: all 0.3s ease-out;
 }
 
-* > a.button:hover {
+a.button:hover, a.button-small:hover {
   background: #202020;
+}
+
+a.button {
+  font-size: 18px;
+  padding: 8px;
+}
+
+a.button-small {
+  font-size: 14px;
+  padding: 5px;
 }

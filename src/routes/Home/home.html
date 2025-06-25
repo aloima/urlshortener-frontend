@@ -22,8 +22,8 @@
     <p>URL is shortened.</p>
 
     <ul>
-      <li>Short URL: <a class="button" [routerLink]="`/${idToString(id)}`">{{ `${site}/${idToString(id)}` }}</a></li>
-      <li>Deletion URL: <a class="button" [routerLink]="`/delete/${idToString(deletionId)}`">{{ `${site}/delete/${idToString(deletionId)}` }}</a></li>
+      <li>Short URL: <a class="button-small" [routerLink]="`/${idToString(id)}`">{{ `${site}/${idToString(id)}` }}</a></li>
+      <li>Deletion URL: <a class="button-small" [routerLink]="`/delete/${idToString(deletionId)}`">{{ `${site}/delete/${idToString(deletionId)}` }}</a></li>
       <li>Is listable?: {{ listable ? "Yes" : "No" }}</li>
     </ul>
   </div>
