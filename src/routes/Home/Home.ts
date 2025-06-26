@@ -45,6 +45,11 @@ export class Home {
       value: this.url,
       listable: this.listable
     }).pipe(catchError(data => of(data.error))).subscribe((value: any) => {
+      if (value instanceof Error) {
+        this.errorMessage = "API server is unreachable, so could not list URLs.";
+        return;
+      }
+
       if (value.error) {
         this.errorMessage = value.error.replaceAll("'value' in data", "Given input");
         return;

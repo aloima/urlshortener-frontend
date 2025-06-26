@@ -54,3 +54,11 @@ a.button-small {
   font-size: 14px;
   padding: 5px;
 }
+
+p.error {
+  background-color: rgb(163, 0, 0);
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #5c5c5c;
+  font-size: 16px !important;
+}

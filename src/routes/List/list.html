@@ -2,8 +2,17 @@
   <div *ngIf="loading$ | async; then loading; else succeed"></div>
 
   <ng-template #loading>
-    <a class="button" routerLink="/">Go back</a>
-    <p>Loading shortened URLs...</p>
+    <div *ngIf="errorMessage; then failure; else loadingSection"></div>
+
+    <ng-template #loadingSection>
+      <a class="button" routerLink="/">Go back</a>
+      <p>Loading shortened URLs...</p>
+    </ng-template>
+
+    <ng-template #failure>
+      <a class="button" routerLink="/">Go back</a>
+      <p class="error">{{ errorMessage }}</p>
+    </ng-template>
   </ng-template>
 
   <ng-template #succeed>
