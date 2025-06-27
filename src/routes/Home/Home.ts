@@ -46,7 +46,7 @@ export class Home {
       listable: this.listable
     }).pipe(catchError(data => of(data.error))).subscribe((value: any) => {
       if (value instanceof Error) {
-        this.errorMessage = "API server is unreachable, so could not list URLs.";
+        this.errorMessage = "API server is unreachable, so could not shorten URL.";
         return;
       }
 
