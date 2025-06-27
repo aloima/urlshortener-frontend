@@ -19,11 +19,11 @@ root {
 button {
   padding: 8px;
   font-size: 18px;
-  font-family: "Roboto";
+  font-family: "Inter";
   width: 60%;
   background: #0d0d0d;
   border: 1px solid #5c5c5c;
-  border-radius: 5px;
+  border-radius: 8px;
   color: white;
   transition: all 0.3s ease-out;
 }
@@ -36,7 +36,7 @@ a.button, a.button-small {
   text-decoration: none;
   color: white;
   background: #0d0d0d;
-  border-radius: 5px;
+  border-radius: 8px;
   border: 1px solid #5c5c5c;
   transition: all 0.3s ease-out;
 }
@@ -48,6 +48,7 @@ a.button:hover, a.button-small:hover {
 a.button {
   font-size: 18px;
   padding: 8px;
+  text-align: center;
 }
 
 a.button-small {
@@ -58,7 +59,7 @@ a.button-small {
 p.error {
   background-color: rgb(163, 0, 0);
   padding: 8px;
-  border-radius: 4px;
+  border-radius: 6px;
   border: 1px solid #5c5c5c;
   font-size: 16px !important;
 }

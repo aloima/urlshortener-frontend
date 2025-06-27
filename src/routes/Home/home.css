@@ -32,11 +32,17 @@ input[type="url"]:focus {
 div.url-input > label {
   display: block;
   font-size: 20px;
+  margin-bottom: 3px;
 }
 
 div.listable-input > input[type="checkbox"] {
   width: 16px;
   height: 16px;
+  accent-color: #0e0e0e;
+}
+
+div.listable-input > input[type="checkbox"]:checked {
+  outline: 1px solid rgb(182, 182, 182);
 }
 
 div.listable-input > label {
@@ -59,4 +65,14 @@ div.home > ul > li {
 
 div.home > p {
   font-size: 20px;
+}
+
+div.home > div.buttons {
+  margin: 0;
+  margin-top: 10px;
+}
+
+div.home > div.buttons > * {
+  margin: 0px 5px 0px 4px;
+  width: auto;
 }
