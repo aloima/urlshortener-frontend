@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, NgZone } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { RouterModule } from "@angular/router";
+import { RouterLink } from "@angular/router";
 import { HttpClient } from "@angular/common/http";
 
 import { API_URL, URL_COUNT_PER_PAGE } from "../../environment";
@@ -10,7 +10,7 @@ import { idToString } from "../../app/id";
 @Component({
   templateUrl: "./list.html",
   styleUrl: "./list.css",
-  imports: [CommonModule, RouterModule, ]
+  imports: [CommonModule, RouterLink]
 })
 
 export class List {
