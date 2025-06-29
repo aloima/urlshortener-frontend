@@ -6,9 +6,8 @@
 
 # Node
 /node_modules
-/package-lock.json
 
-# Visual Studip Cpde
+# Visual Studio Code
 .vscode/
 
 # Angular
