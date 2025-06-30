@@ -17,6 +17,7 @@ export class List {
   site: string;
   errorMessage: string = "";
 
+  page: number = 1;
   listableCount: number = 0;
   data: URLEntry[] = [];
   loading$ = new BehaviorSubject<boolean>(false);
@@ -32,7 +33,7 @@ export class List {
   }
 
   calculatePageCount() {
-    return (this.listableCount / URL_COUNT_PER_PAGE);
+    return Math.ceil(this.listableCount / URL_COUNT_PER_PAGE);
   }
 
   loadPage(page: number) {
@@ -57,5 +58,15 @@ export class List {
         this.loading$.next(false);
       });
     });
+  }
+
+  nextPage() {
+    this.page += 1;
+    this.loadPage(this.page);
+  }
+
+  prevPage() {
+    this.page -= 1;
+    this.loadPage(this.page);
   }
 }

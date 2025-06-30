@@ -22,3 +22,27 @@ table {
 p.no-url {
   margin-top: -3px;
 }
+
+div.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+div.header > div {
+  display: flex;
+}
+
+div.header > div > div {
+  flex-shrink: 0;
+  line-height: 34px;
+}
+
+div.header > div > button {
+  flex-grow: 1;
+}
+
+div.header > div > * {
+  margin: 0 5px;
+}

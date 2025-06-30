@@ -32,6 +32,11 @@ button {
   transition: all 0.3s ease-out;
 }
 
+button:disabled, button:disabled:hover {
+  cursor: not-allowed;
+  background: #303030;
+}
+
 button:hover {
   background: #414141;
 }

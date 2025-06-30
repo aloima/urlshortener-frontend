@@ -25,7 +25,15 @@
     </ng-template>
 
     <ng-template #exist>
-      <div><a class="button" routerLink="/">Go back</a></div>
+      <div class="header">
+        <a class="button" routerLink="/">Go back</a>
+
+        <div>
+          <button (click)="prevPage()" [disabled]="page == 1"><</button>
+          <div>{{ page }} / {{ calculatePageCount() }}</div>
+          <button (click)="nextPage()" [disabled]="page == calculatePageCount()">></button>
+        </div>
+      </div>
 
       <table>
         <tr>
