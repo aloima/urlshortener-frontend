@@ -17,6 +17,7 @@ th, td {
 
 table {
   margin-top: 20px;
+  color: var(--color);
 }
 
 p.no-url {
@@ -37,6 +38,7 @@ div.header > div {
 div.header > div > div {
   flex-shrink: 0;
   line-height: 34px;
+  color: var(--color);
 }
 
 div.header > div > button {

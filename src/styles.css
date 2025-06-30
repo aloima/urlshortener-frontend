@@ -1,5 +1,21 @@
-:root {
+html[data-theme="dark"] {
   --background-color: #0E0E0E;
+  --container-color: #1B1B1B;
+  --button-color: #0D0D0D;
+  --button-hover-color: #414141;
+  --button-disabled: #303030;
+  --error: rgb(163, 0, 0);
+  --color: white;
+}
+
+html[data-theme="light"] {
+  --background-color: #E0E0E0;
+  --container-color: #D3D3D3;
+  --button-color: #8f8f8f;
+  --button-hover-color: #757575;
+  --button-disabled: #575757;
+  --error: rgb(201, 0, 0);
+  --color: black;
 }
 
 html {
@@ -9,7 +25,7 @@ html {
 body {
   padding: 0 !important;
   margin: 0 !important;
-  background: #0e0e0e;
+  background: var(--background-color);
   height: 100%;
 }
 
@@ -25,29 +41,29 @@ button {
   font-size: 18px;
   font-family: "Inter";
   width: 60%;
-  background: #0d0d0d;
+  background: var(--button-color);
   border: 1px solid #5c5c5c;
   border-radius: 8px;
-  color: white;
   transition: all 0.3s ease-out;
+  color: var(--color);
 }
 
 button:disabled, button:disabled:hover {
   cursor: not-allowed;
-  background: #303030;
+  background: var(--button-disabled);
 }
 
 button:hover {
-  background: #414141;
+  background: var(--button-hover-color);
 }
 
 a.button, a.button-small {
   text-decoration: none;
-  color: white;
-  background: #0d0d0d;
+  background: var(--button-color);
   border-radius: 8px;
   border: 1px solid #5c5c5c;
   transition: all 0.3s ease-out;
+  color: var(--color);
 }
 
 li > a.button-small {
@@ -55,7 +71,7 @@ li > a.button-small {
 }
 
 a.button:hover, a.button-small:hover {
-  background: #414141;
+  background: var(--button-hover-color);
 }
 
 a.button {
@@ -70,7 +86,7 @@ a.button-small {
 }
 
 p.error {
-  background-color: rgb(163, 0, 0);
+  background-color: var(--error);
   padding: 8px;
   border-radius: 6px;
   border: 1px solid #5c5c5c;

@@ -1,10 +1,31 @@
 div.container {
   padding: 30px 80px;
-  background: #1b1b1b;
+  background: var(--container-color);
   display: flex;
   justify-content: center;
   border-radius: 20px;
   border: 1px solid #5c5c5c;
   color: white;
   font-family: "Inter";
+}
+
+.slider {
+  position: absolute;
+  display: inline-block;
+  width: 90px;
+  height: 34px;
+  background: var(--button-hover-color);
+  top: 20px;
+  left: 20px;
+  border-radius: 20px;
+}
+
+.slider > .round {
+  border-radius: 20px;
+  border: 1px solid rgb(105, 105, 105);
+  background: var(--container-color);
+  width: 30px;
+  height: 30px;
+  margin: 1px 2px;
+  transition: all 1s;
 }

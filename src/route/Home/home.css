@@ -6,7 +6,7 @@ div.home {
 }
 
 input[type="url"]:invalid {
-  background-color: rgb(175, 0, 0);
+  background-color: var(--error-box);
   color: white;
 }
 
@@ -33,12 +33,13 @@ div.url-input > label {
   display: block;
   font-size: 20px;
   margin-bottom: 3px;
+  color: var(--color);
 }
 
 div.listable-input > input[type="checkbox"] {
   width: 16px;
   height: 16px;
-  accent-color: #0e0e0e;
+  accent-color: var(--background-color);
 }
 
 div.listable-input > input[type="checkbox"]:checked {
@@ -49,6 +50,7 @@ div.listable-input > label {
   float: right;
   font-size: 20px;
   margin-left: 5px;
+  color: var(--color);
 }
 
 div.home > * {
