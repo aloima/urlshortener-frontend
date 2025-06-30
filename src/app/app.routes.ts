@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
 
-import { Home } from '../routes/Home/Home';
-import { Deletion } from '../routes/Deletion/Deletion';
-import { List } from '../routes/List/List';
-import { Go } from '../routes/Go/Go';
+import { Home } from '../route/Home/Home';
+import { Deletion } from '../route/Deletion/Deletion';
+import { List } from '../route/List/List';
+import { Go } from '../route/Go/Go';
 
 export const routes: Routes = [
   {
