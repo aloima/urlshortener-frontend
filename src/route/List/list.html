@@ -47,7 +47,9 @@
           <td><a class="button-small" [routerLink]="`/${idToString(url.id)}`">{{ `${site}/${idToString(url.id)}` }}</a></td>
           <td><a class="button-small" [href]="url.value">{{ url.value }}</a></td>
           <td>{{ url.clicks }}</td>
-          <td>{{ url.createdAt }}</td>
+          <td class="tooltip">{{ takeNormalizedDate(url.createdAt, false) }}
+            <span class="tooltiptext">{{ takeNormalizedDate(url.createdAt, true) }}</span>
+          </td>
         </tr>
       </table>
     </ng-template>

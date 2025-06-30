@@ -69,4 +69,15 @@ export class List {
     this.page -= 1;
     this.loadPage(this.page);
   }
+
+  takeNormalizedDate(dateString: Date, full: boolean): string {
+    const date = new Date(dateString);
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    if (full) {
+      return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+    } else {
+      return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
+    }
+  }
 }
