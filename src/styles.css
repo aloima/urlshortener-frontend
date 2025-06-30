@@ -29,7 +29,7 @@ button {
 }
 
 button:hover {
-  background: #202020;
+  background: #414141;
 }
 
 a.button, a.button-small {
@@ -41,8 +41,12 @@ a.button, a.button-small {
   transition: all 0.3s ease-out;
 }
 
+li > a.button-small {
+  font-size: 18px !important;
+}
+
 a.button:hover, a.button-small:hover {
-  background: #202020;
+  background: #414141;
 }
 
 a.button {
