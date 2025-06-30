@@ -4,7 +4,7 @@ import { RouterLink } from "@angular/router";
 import { HttpClient } from "@angular/common/http";
 
 import { API_URL, URL_COUNT_PER_PAGE } from "../../environment";
-import { BehaviorSubject, catchError, of } from "rxjs";
+import { catchError, of } from "rxjs";
 import { idToString } from "../../app/id";
 
 @Component({
@@ -19,8 +19,7 @@ export class List {
 
   page: number = 1;
   listableCount: number = 0;
-  data: URLEntry[] = [];
-  loading$ = new BehaviorSubject<boolean>(false);
+  data$: Promise<URLEntry[]> = Promise.resolve([]);
 
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef, private zone: NgZone) {
     this.site = window.location.origin;
@@ -37,7 +36,7 @@ export class List {
   }
 
   loadPage(page: number) {
-    this.loading$.next(true);
+    this.data$ = Promise.resolve([]);
 
     const start = (page - 1) * URL_COUNT_PER_PAGE;
     const end = page * URL_COUNT_PER_PAGE;
@@ -54,8 +53,7 @@ export class List {
         const response = res as ListResponse;
 
         this.listableCount = response.listableCount;
-        this.data = response.data;
-        this.loading$.next(false);
+        this.data$ = Promise.resolve(response.data);
       });
     });
   }
