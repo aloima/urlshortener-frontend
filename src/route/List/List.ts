@@ -19,7 +19,7 @@ export class List {
 
   page: number = 1;
   listableCount: number = 0;
-  data$: Promise<URLEntry[]> = Promise.resolve([]);
+  data$: Promise<URLEntry[] | null> = Promise.resolve([]);
 
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef, private zone: NgZone) {
     this.site = window.location.origin;
@@ -36,7 +36,7 @@ export class List {
   }
 
   loadPage(page: number) {
-    this.data$ = Promise.resolve([]);
+    this.data$ = Promise.resolve(null);
 
     const start = (page - 1) * URL_COUNT_PER_PAGE;
     const end = page * URL_COUNT_PER_PAGE;

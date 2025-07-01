@@ -1,5 +1,5 @@
 <div class="list">
-  <div *ngIf="(data$ | async)?.length == 0; then loading; else succeed"></div>
+  <div *ngIf="(data$ | async) == null; then loading; else succeed"></div>
 
   <ng-template #loading>
     <div *ngIf="errorMessage; then failure; else loadingSection"></div>
