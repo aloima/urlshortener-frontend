@@ -47,8 +47,11 @@
           <td><a class="button-small" [routerLink]="`/${idToString(url.id)}`">{{ `${site}/${idToString(url.id)}` }}</a></td>
           <td><a class="button-small" [href]="url.value">{{ url.value }}</a></td>
           <td>{{ url.clicks }}</td>
-          <td class="tooltip">{{ takeNormalizedDate(url.createdAt, false) }}
-            <span class="tooltiptext">{{ takeNormalizedDate(url.createdAt, true) }}</span>
+          <td>
+            <div class="tooltip">
+              {{ takeNormalizedDate(url.createdAt, false) }}
+              <span class="tooltiptext">{{ takeNormalizedDate(url.createdAt, true) }}</span>
+            </div>
           </td>
         </tr>
       </table>

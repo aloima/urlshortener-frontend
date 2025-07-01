@@ -52,7 +52,7 @@ div.header > div > * {
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
+  border: 0;
 }
 
 .tooltip .tooltiptext {
