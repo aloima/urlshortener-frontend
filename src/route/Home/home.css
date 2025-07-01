@@ -6,7 +6,7 @@ div.home {
 }
 
 input[type="url"]:invalid {
-  background-color: var(--error-box);
+  background-color: var(--error);
   color: white;
 }
 
@@ -64,10 +64,12 @@ div.home > ul {
 div.home > ul > li {
   padding: 7px;
   font-size: 20px;
+  color: var(--color);
 }
 
 div.home > p {
   font-size: 20px;
+  color: var(--color);
 }
 
 div.home > div.buttons {
